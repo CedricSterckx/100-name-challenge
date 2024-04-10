@@ -1,36 +1,34 @@
-import React from 'react';
-
-export default function rules() {
+export default function Rules() {
     return (
         <div>
-            <h1>Rules</h1>
-            <ul>
-                <ol>
+            <h1 className="font-bold flex justify-center">Rules</h1>
+            <ol className="list-disc text-sm">
+                <li>
                     Cannot use help
-                </ol>
-                <ol>
+                </li>
+                <li>
                     Can be a dead person
-                </ol>
-                <ol>
+                </li>
+                <li>
                     Can be any version of their name (the rock vs Dwayne Johnson)
-                </ol>
-                <ol>
+                </li>
+                <li>
                     Spelling doesn't count
-                </ol>
-                <ol>
+                </li>
+                <li>
                     No family, friends or ex-girlfriend or neighbors or w/e. Can
                     only be googleable person/ public figure
-                </ol>
-                <ol>
+                </li>
+                <li>
                     No fictional character, must be someone with blood in their veins
-                </ol>
-                <ol>
+                </li>
+                <li>
                     The timer start as soon as you start typing and will stop when you reach the 100 names
-                </ol>
-                <ol>
+                </li>
+                <li>
                     Have to say the name, not a description (Michelle Obama is good, Obama's wife is bad)
-                </ol>
-            </ul>
+                </li>
+            </ol>
         </div>
     );
 }
