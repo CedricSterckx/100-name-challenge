@@ -2,7 +2,7 @@ export default function Rules() {
     return (
         <div>
             <h1 className="font-bold flex justify-center">Rules</h1>
-            <ol className="list-disc text-sm">
+            <ol className="list-disc">
                 <li>
                     Cannot use help
                 </li>
