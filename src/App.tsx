@@ -87,7 +87,7 @@ export default function App() {
           <h1 className="text-xl">
             Your names:
           </h1>
-          <ul className="max-h-[50vh] overflow-auto">
+          <ul className="max-h-[75vh] overflow-auto">
             {inputNames.map((name: string, index: number) => {
               return <li
                 ref={index === inputNames.length - 1 ? lastItemRef : null}
