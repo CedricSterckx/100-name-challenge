@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import Rules from "./rules";
+import Rules from "./components/rules";
 
 type duplicateType = {
   isDuplicate: boolean,
@@ -7,8 +7,8 @@ type duplicateType = {
 };
 
 export default function App() {
-
   const defaultIsDuplicate: duplicateType = { index: -1, isDuplicate: false };
+
   const [inputNames, setInputNames] = useState<string[]>([]);
   const [input, setInput] = useState<string>("");
   const [isDuplicate, setIsDucplicate] = useState<duplicateType>(defaultIsDuplicate);
@@ -18,7 +18,6 @@ export default function App() {
   const intervalIdRef = useRef<NodeJS.Timeout | null>(null);
   const lastItemRef = useRef(null);
   const ENDGAMETHRESHOLD = 100;
-
 
   useEffect(() => {
     if (inputNames.length >= ENDGAMETHRESHOLD && intervalIdRef.current) {
@@ -47,8 +46,7 @@ export default function App() {
 
   useEffect(() => {
     if (lastItemRef.current) {
-      //@ts-ignore
-      lastItemRef.current.scrollIntoView({ behavior: 'smooth' });
+      (lastItemRef.current as HTMLElement).scrollIntoView({ behavior: 'smooth' });
     }
   }, [inputNames]);
 
